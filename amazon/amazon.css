@@ -1,0 +1,36 @@
+*{
+    color: white;
+}
+.container{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+   
+}
+.searchnav,.nav{
+    background-color: black;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.searchnav{
+    
+    justify-content: space-around;
+    align-items: center;
+}
+.logoImg img{
+    height: 70px;
+    width: 140px;
+    
+   
+}
+.search input{
+    width: 600px;
+    height: 30px;
+    
+}
+.nav{
+    justify-content: start;
+    gap: 30px;
+}
