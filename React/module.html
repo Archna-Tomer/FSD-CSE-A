@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="parent">HELLO WORLD!!   </div>
-    <!-- <button id="btn" onclick="getData()">Click me!!</button>
-    <div id="disp"></div> -->
-    <script src="index.js"></script>
+ <script type="module">
+    import {name,hi,calc} from "./data.js";
+    
+    console.log(name,calc);
+    console.log(hi());
+ </script>   
 </body>
 </html>
