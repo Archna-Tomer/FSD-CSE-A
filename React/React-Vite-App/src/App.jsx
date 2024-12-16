@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Student from './Student';
 import logo from "./assets/OIP.jpeg";
 import StudentState from './StudentState';
 import UseOfState from './UseOfState';
 import ImageManipulation from './ImageManipulation';
+import Idcard from './Idcard';
+import Loginn from './Loginn';
+import Registration from './Registration';
+import {BrowserRouter,Routes,Router, Route} from 'react-router-dom';
 function App(){
+  const[rData,setrDdata]=useState();
   
  const myStyle={
   display:'flex',
@@ -32,7 +37,24 @@ function App(){
     // </div>
     // <div> <UseOfState/>  </div>
     <div>
-      <ImageManipulation/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Mainlayout/>}></Route>
+        <Route path='/login' element={<Loginn/>}>
+
+        </Route>
+        <Route path='/registration' element={<Registration/>}></Route>
+
+      </Routes>
+      </BrowserRouter>
+      <div>
+        {JSON.stringify(rData)};
+      </div>
+      {/* <ImageManipulation/> */}
+      {/* <Idcard /> */}
+     {/* <Loginn lData={rData}/>
+     <Registration regData={setrDdata}/> */}
+     {/* <Loginn/> */}
     </div>
     
 
